@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>International Brand Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">International Brand Tracker</p>
+        <h1>Brand health across AU, Canada, and UK</h1>
+      </div>
+      <div class="wave-badge">
+        <span>Latest wave</span>
+        <strong>H1 2026</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="section quick-section" aria-labelledby="takeaways-title">
+        <article class="panel panel-accent takeaways-panel">
+          <div>
+            <p class="eyebrow">Quick Takeaways</p>
+            <h2 id="takeaways-title">What stands out</h2>
+          </div>
+          <ul id="crossMarketInsights" class="insight-list"></ul>
+        </article>
+      </section>
+
+      <section class="section section-tight" aria-labelledby="awareness-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Awareness</p>
+            <h2 id="awareness-title">Unaided and aided awareness</h2>
+          </div>
+          <div class="control-cluster" aria-label="Awareness controls">
+            <div class="segmented" id="metricControls"></div>
+            <div class="segmented" id="waveControls"></div>
+            <div class="segmented" id="marketControls"></div>
+          </div>
+        </div>
+
+        <div class="grid two-col">
+          <article class="panel">
+            <div class="panel-head">
+              <h3 id="awarenessChartTitle">Brand awareness</h3>
+              <p id="awarenessChartNote"></p>
+            </div>
+            <div id="awarenessChart" class="bar-chart"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>Awareness trajectories</h3>
+                <p class="panel-subtitle">Compare the selected competitor set across the three tracker waves.</p>
+              </div>
+              <div class="control-cluster" aria-label="Competitor awareness controls">
+                <div class="segmented" id="competitorMetricControls"></div>
+                <div class="segmented" id="competitorMarketControls"></div>
+              </div>
+            </div>
+            <div id="competitorChart" class="multi-line-chart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="cross-market-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Cross-Market</p>
+            <h2 id="cross-market-title">H1 2026 market read</h2>
+          </div>
+        </div>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Shapermint funnel snapshot</h3>
+            <p>All rows reference Shapermint. Awareness and usage include HoH and YoY movement; H1 2026-only funnel metrics are labelled separately.</p>
+          </div>
+          <div id="comparisonTable" class="table-wrap"></div>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="deep-dive-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Deep Dive</p>
+            <h2 id="deep-dive-title">H1 2026 market diagnostics</h2>
+          </div>
+          <div class="segmented" id="deepDiveTabs"></div>
+        </div>
+
+        <div id="deepDive" class="deep-dive"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>International Brand Tracker dashboard</span>
+      <span>Data through H1 2026</span>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
